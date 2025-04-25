@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "574882388345",
+    "project_id": "pigmobile",
+    "storage_bucket": "pigmobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574882388345:android:ef1158b87781b6ab12f7a8",
+        "android_client_info": {
+          "package_name": "com.david.mobilepig"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXqkhGSjne6_U8Ier6PzWpKkFcjVoh3Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
