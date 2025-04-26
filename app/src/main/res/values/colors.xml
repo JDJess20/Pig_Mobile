@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ROSA_CUENTA">#F41CA9</color>
+    <color name="COLOR_BOTONES">#e939c1</color>
 
     <color name="colorPrimary">#F8BBD0</color>
     <color name="colorPrimaryDark">#FF4081</color>

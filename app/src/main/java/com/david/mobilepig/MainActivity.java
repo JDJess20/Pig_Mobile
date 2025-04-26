@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void redirigirACalculadora() {
-        startActivity(new Intent(this, CalculaActivity.class));
+        startActivity(new Intent(this, OpcionesActivity.class));
         finish(); // Importante para no volver atrás con el botón
     }
 

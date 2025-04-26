@@ -16,10 +16,11 @@
     <string name="title_activity_maps">MapsActivity</string>
 
 
-
     <!--CALCULADORA-->
     <string name="encabezado">Calcula fecha de posible parto</string>
     <string name="boton_calcula">CALCULA FPP</string>
+    <string name="btn_dispensaComida">Dispensar Alimento</string>
+    <string name="btn_AgregarCriandera">Agregar Criandera</string>
 
 
     <!-- REGISTRO -->
