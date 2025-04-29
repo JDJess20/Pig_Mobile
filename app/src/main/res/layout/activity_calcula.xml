@@ -6,56 +6,151 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculaActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/back_login"
+    android:fitsSystemWindows="true">
 
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:calendarViewShown="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
-
+    <!-- TextView del título -->
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/encabezado"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/registra_crianderaaa"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- DatePicker -->
+
+    <!-- Contenedor Scrollable para los campos de texto -->
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="358dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="8dp"
+        android:calendarViewShown="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Campo Alias -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAliasLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/input_alias"
+                android:textColorHint="@color/ROSA_CUENTA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_Alias"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/ROSA_CUENTA"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Fecha Registro -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputFechaRegistroLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/input_fechaRegistro"
+                android:textColorHint="@color/ROSA_CUENTA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/InputFechaRegistro"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                    android:textStyle="bold"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Fecha Parto -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputFechaPartoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/input_FechaParto"
+                android:textColorHint="@color/ROSA_CUENTA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputFechaParto"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                    android:textStyle="bold"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Registrar -->
     <Button
         android:id="@+id/btnCalcular"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/boton_calcula"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/btn_registrarcerda"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/datePicker" />
-
-    <TextView
-        android:id="@+id/txtResultado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Fecha probable de parto:"
-        android:textColor="#000000"
-        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCalcular" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btnRegresaOpcion"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/btn_RegresaOpcion"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

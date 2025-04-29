@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_login"
+    android:fitsSystemWindows="true"
+    android:padding="16dp"
+    tools:context=".Activity_Consultar">
+
+    <!-- Título -->
+
+    <!-- Selector de cerda -->
+
+    <!-- Contenedor de información -->
+
+
+    <!-- Botón Regresar -->
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="366dp"
+        android:layout_height="70dp"
+        android:background="@drawable/consulta_crianderaaa"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinnerLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:hint="@string/btn_BuscarCerditaXAlias"
+        android:textColorHint="@color/ROSA_CUENTA"
+        app:layout_constraintBottom_toTopOf="@+id/lottieAnimationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Cambiamos el AutoCompleteTextView por un Spinner -->
+        <Spinner
+            android:id="@+id/spinnerCerdas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:spinnerMode="dropdown"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLayout"
+        app:layout_constraintVertical_bias="0.19">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Campo Alias -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAliasLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/input_AliasCriandera"
+                android:textColorHint="@color/ROSA_CUENTA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvAlias"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Fecha Registro -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputFechaRegistroLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/input_fechaRegistro"
+                android:textColorHint="@color/ROSA_CUENTA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvFechaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Fecha Parto -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputFechaPartoLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/input_FechaParto"
+                android:textColorHint="@color/ROSA_CUENTA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvFechaParto"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:minHeight="48dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView2"
+        android:layout_width="182dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="436dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="plataforma.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="true">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <Button
+        android:id="@+id/btnRegresardeConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/btn_RegresaOpcion"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.585" />
+</androidx.constraintlayout.widget.ConstraintLayout>

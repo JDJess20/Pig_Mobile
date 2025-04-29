@@ -1,8 +1,10 @@
 package com.david.mobilepig;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ public class RegistroActivity extends AppCompatActivity {
     private TextInputEditText etName, etEmail, etPassword;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+    private Button btnRegresarDelRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,16 @@ public class RegistroActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
 
         findViewById(R.id.btnRegister).setOnClickListener(v -> registrarUsuario());
+
+
+        btnRegresarDelRegistro = findViewById(R.id.btnRegresaRegistro);
+        btnRegresarDelRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void registrarUsuario() {

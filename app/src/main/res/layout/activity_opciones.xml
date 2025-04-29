@@ -13,7 +13,7 @@
         android:id="@+id/imageView"
         android:layout_width="310dp"
         android:layout_height="200dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +24,10 @@
         android:id="@+id/lottieAnimationView"
         android:layout_width="174dp"
         android:layout_height="158dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_fileName="cerdito_hola.json"
@@ -37,29 +37,53 @@
     </com.airbnb.lottie.LottieAnimationView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/btnCerrarSesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnConsultaCerdita"
+        android:layout_width="124dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="380dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/lbl_ConsultaCriandera"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toEndOf="@+id/btnOpcionAgregar" />
+
+    <Button
+        android:id="@+id/btnOpcionAgregar"
         android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="308dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="380dp"
+        android:backgroundTint="@color/COLOR_BOTONES"
+        android:text="@string/btn_AgregarCriandera"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="380dp"
         android:backgroundTint="@color/COLOR_BOTONES"
         android:text="@string/btn_dispensaComida"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="308dp"
-        android:backgroundTint="@color/COLOR_BOTONES"
-        android:text="@string/btn_AgregarCriandera"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

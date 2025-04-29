@@ -1,6 +1,8 @@
 package com.david.mobilepig;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
@@ -18,10 +20,19 @@ public class MainActivity extends AppCompatActivity {
     private TextInputLayout tilEmail, tilPassword;
     private TextInputEditText etEmail, etPassword;
     private FirebaseAuth mAuth;
+    private SharedPreferences sharedPref; // Nuevo: Para persistencia
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Verificar sesión ANTES de mostrar la vista
+        sharedPref = getSharedPreferences("user_session", Context.MODE_PRIVATE);
+        if (sharedPref.getBoolean("is_logged_in", false)) {
+            redirigirACalculadora();
+            return; // Si hay sesión, termina el onCreate aquí
+        }
+
         setContentView(R.layout.activity_main);
 
         // Inicializar Firebase Auth
@@ -35,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnLogin = findViewById(R.id.button);
         TextView tvRegistro = findViewById(R.id.textView3);
 
-        // Configurar listeners
+        // Listeners
         btnLogin.setOnClickListener(v -> loginUser());
         tvRegistro.setOnClickListener(v -> {
             startActivity(new Intent(this, RegistroActivity.class));
@@ -46,13 +57,17 @@ public class MainActivity extends AppCompatActivity {
         String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
 
-        // Validaciones
         if (!validarCampos(email, password)) return;
 
-        // Autenticar con Firebase
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
+                        // Guardar sesión en SharedPreferences
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putBoolean("is_logged_in", true);
+                        editor.putString("user_email", email); // Opcional
+                        editor.apply();
+
                         redirigirACalculadora();
                     } else {
                         mostrarError(task.getException());
@@ -65,28 +80,24 @@ public class MainActivity extends AppCompatActivity {
             tilEmail.setError("Correo requerido");
             return false;
         }
-
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             tilEmail.setError("Correo no válido");
             return false;
         }
-
         if (password.isEmpty()) {
             tilPassword.setError("Contraseña requerida");
             return false;
         }
-
         if (password.length() < 6) {
             tilPassword.setError("Mínimo 6 caracteres");
             return false;
         }
-
         return true;
     }
 
     private void redirigirACalculadora() {
         startActivity(new Intent(this, OpcionesActivity.class));
-        finish(); // Importante para no volver atrás con el botón
+        finish(); // Evita volver atrás con el botón
     }
 
     private void mostrarError(Exception exception) {
@@ -98,6 +109,4 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(this, "Error: " + error, Toast.LENGTH_SHORT).show();
     }
-
-    // ELIMINADO el método onStart() para evitar redirección automática
 }

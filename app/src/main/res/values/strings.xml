@@ -3,10 +3,11 @@
     <string name="app_name">PigMobile</string>
     <string name="developers">Equipo Alfa</string>
     <string name="desarrollo">Desarrollado por</string>
-    <string name="verison">Versión 1.0.0</string>
+    <string name="verison">Versión 1.1.2</string>
 
     <!-- LOGIN -->
     <string name="titulo_login">Ingrese sesión</string>
+    <string name="tv_IngreseUser">Ingrese usuario</string>
     <string name="lbl_correo">Correo Electrónico</string>
     <string name="txt_correo">Ingrese correo</string>
     <string name="lbl_password">Contraseña</string>
@@ -14,19 +15,42 @@
     <string name="btn_ingresar">Ingresar</string>
     <string name="lbl_crear_cuenta">No tienes cuenta?, Registrate</string>
     <string name="title_activity_maps">MapsActivity</string>
-
+    <string name="input_alias">Alías de la cerdita</string>
+    <string name="input_fechaRegistro">Fecha de registro</string>
+    <string name="input_FechaParto">Fecha posible de parto</string>
+    <string name="btn_registrarcerda">Registrar</string>
 
     <!--CALCULADORA-->
     <string name="encabezado">Calcula fecha de posible parto</string>
     <string name="boton_calcula">CALCULA FPP</string>
     <string name="btn_dispensaComida">Dispensar Alimento</string>
     <string name="btn_AgregarCriandera">Agregar Criandera</string>
+    <string name="btn_RegresaOpcion">Regresar</string>
 
 
-    <!-- REGISTRO -->
+    <!--ACTIVIDAD DE REGISTRO-->
+    <string name="btnRegresarDel_Registro">Regresar</string>
+    <string name="btnRegistrarse_Regisro">Registrar</string>
+    <string name="Caracteres">Minímo 6 Caracteres</string>
+    <string name="Ejemplo_Correo">ejemplo@dominio.com</string>
+
+
+    <!--ACTIVIDAD DE OPCIONES-->
+    <string name="btnCerrarSesion">Cerrar sesión</string>
+    <string name="lbl_ConsultaCriandera">Consultar Criandera</string>
+
+
+    <!-- ACTIVIDAD OPCIONES -->
+    <string name="btn_consultarCerditas">Consultar cerdita</string>
+    <string name="btn_BuscarCerditaXAlias">Seleccionar criandera</string>
+
+
+    <!-- ACTIVIDAD CONSULTAR -->
+<string name="input_AliasCriandera">Alías de la criandera</string>
 
     <!-- ELECCION -->
 
     <!-- MAS DATOS -->
+
 
 </resources>
