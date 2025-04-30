@@ -46,8 +46,11 @@
 
 
     <!-- ACTIVIDAD CONSULTAR -->
-<string name="input_AliasCriandera">Alías de la criandera</string>
+    <string name="input_AliasCriandera">Alías de la criandera</string>
 
+
+    <!---ACTIVIDAD DE DISPENSAR-->
+    <string name="btn_dispensar">Dispensar Alimento</string>
     <!-- ELECCION -->
 
     <!-- MAS DATOS -->

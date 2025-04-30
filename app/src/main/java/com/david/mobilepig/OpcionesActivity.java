@@ -15,6 +15,7 @@ public class OpcionesActivity extends AppCompatActivity {
 
     private Button btnAgregarCerdita;
     private Button btnConsultarCedita;
+    private Button btnIraConsultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,16 @@ public class OpcionesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OpcionesActivity.this, Activity_Consultar.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btnIraConsultar = findViewById(R.id.button2);
+        btnIraConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OpcionesActivity.this, activity_dispensar.class);
                 startActivity(intent);
             }
         });

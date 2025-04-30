@@ -86,7 +86,7 @@ public class Activity_Consultar extends AppCompatActivity {
                 // No hacer nada
             }
         });
-
+    
         btnRegresardeConsulta = findViewById(R.id.btnRegresardeConsulta);
         btnRegresardeConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
