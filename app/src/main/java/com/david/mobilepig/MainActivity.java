@@ -1,3 +1,4 @@
+
 package com.david.mobilepig;
 
 import android.content.Context;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Verificar sesión ANTES de mostrar la vista
         sharedPref = getSharedPreferences("user_session", Context.MODE_PRIVATE);

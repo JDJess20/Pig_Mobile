@@ -24,7 +24,7 @@ public class activity_dispensar extends AppCompatActivity {
     private Button btnDispensar;
     private Button btnRegresarDeDispensar;
 
-    private final String ESP32_IP = "http://192.168.186.167/dispensar"; // Cambia esta IP a la de tu ESP32
+    private final String ESP32_IP = "http://192.168.137.167/dispensar";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

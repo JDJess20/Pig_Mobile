@@ -3,7 +3,7 @@
     <string name="app_name">PigMobile</string>
     <string name="developers">Equipo Alfa</string>
     <string name="desarrollo">Desarrollado por</string>
-    <string name="verison">Versión 1.1.2</string>
+    <string name="verison">Versión 1.1.3</string>
 
     <!-- LOGIN -->
     <string name="titulo_login">Ingrese sesión</string>
